@@ -35,11 +35,11 @@ The original Hugging Face Agents Course provides excellent learning materials fo
 
 ```bash
 # Clone this repository
-git clone https://github.com/yourusername/ai-agent.git
-cd ai-agent
+git clone https://github.com/timetxt/hf-agents-course-lessons.git
+cd hf-agents-course-lessons
 
 # Install dependencies
-pip install -r requirements.txt
+pip install -r ./<course_section_folder>/requirements.txt
 ```
 
 ## 📚 Course Structure
@@ -55,12 +55,10 @@ Each section contains examples adapted to work with local LLM models.
 
 ## 🔧 Supported Local Models
 
-This repository supports various local LLM models, including:
+This repository supports Qwen2.5 local LLM models, including:
 
 - [Qwen2.5-Coder-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
-- [Llama 3](https://huggingface.co/meta-llama)
-- [Mistral](https://huggingface.co/mistralai)
-- Other compatible models that can be run locally
+
 
 ## 📝 Examples
 
@@ -70,6 +68,7 @@ Each example in this repository includes:
 - Instructions for running with local models
 - Explanations of how the example works
 - Comparison with the original HF Inference API approach
+
 
 ## 🤝 Contributing
 
