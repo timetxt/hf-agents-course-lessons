@@ -14,48 +14,6 @@ logging.basicConfig(level=logging.INFO,
                     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger('AppFunctions')
 
-# Below is an example of a tool that does nothing. Amaze us with your creativity !
-# @tool
-# def my_custom_tool() -> str:
-#     """A tool that checks the user's IP address and returns geographic location information including timezone.
-    
-#     Returns:
-#         A string containing the IP address, geographic location information, and timezone.
-#     """
-#     try:
-#         # First, get the IP address
-#         ip_response = requests.get("https://demo.52dayday.com/myip")
-#         if ip_response.status_code != 200:
-#             return f"Failed to retrieve IP address. Status code: {ip_response.status_code}"
-        
-#         # Extract the IP address from the response (assuming it's just a plain text IP)
-#         ip_address = ip_response.text.strip()
-        
-#         # Now, use ip-api.com to get geolocation data
-#         geo_url = f"http://ip-api.com/json/{ip_address}"
-#         geo_response = requests.get(geo_url)
-        
-#         if geo_response.status_code == 200:
-#             geo_data = geo_response.json()
-            
-#             # Check if the request was successful
-#             if geo_data.get("status") == "success":
-#                 # Extract timezone information
-#                 timezone = geo_data.get('timezone', 'Unknown')
-                
-#                 return (f"Your IP address is {ip_address}\n"
-#                         f"Location: {geo_data.get('country', 'Unknown')}, "
-#                         f"{geo_data.get('regionName', 'Unknown')}, "
-#                         f"{geo_data.get('city', 'Unknown')}\n"
-#                         f"ISP: {geo_data.get('isp', 'Unknown')}\n"
-#                         f"Timezone: {timezone}\n"
-#                         f"Coordinates: {geo_data.get('lat', 'Unknown')}, {geo_data.get('lon', 'Unknown')}")
-#             else:
-#                 return f"Failed to retrieve geolocation data for IP {ip_address}. Error: {geo_data.get('message', 'Unknown error')}"
-#         else:
-#             return f"Failed to retrieve geolocation data. Status code: {geo_response.status_code}"
-#     except Exception as e:
-#         return f"Error retrieving IP or geolocation information: {str(e)}"
 
 @tool
 def get_local_time_from_ip() -> str:
@@ -69,8 +27,8 @@ def get_local_time_from_ip() -> str:
     logger.info("Function called: get_local_time_from_ip()")
     try:
         # First, get the IP address
-        logger.info("Requesting IP address from demo.52dayday.com/myip")
-        ip_response = requests.get("https://demo.52dayday.com/myip")
+        logger.info("Requesting IP address from https://icanhazip.com/")
+        ip_response = requests.get("https://icanhazip.com/")
         if ip_response.status_code != 200:
             error_msg = f"Failed to retrieve IP address. Status code: {ip_response.status_code}"
             logger.error(error_msg)
