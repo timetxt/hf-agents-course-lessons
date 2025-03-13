@@ -65,6 +65,7 @@ Each section contains examples adapted to work with local LLM models.
 This repository supports Qwen2.5 local LLM models, including:
 
 - [Qwen2.5-Coder-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
+- [Qwen2.5-Coder-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)
 
 ### 📝 Examples
 
@@ -163,6 +164,7 @@ pip install -r ./<course_section_folder>/requirements.txt
 本仓库支持 Qwen2.5 本地 LLM 模型，包括：
 
 - [Qwen2.5-Coder-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct)
+- [Qwen2.5-Coder-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)
 
 ### 📝 示例
 
