@@ -81,7 +81,7 @@ except Exception as e:
 # final_answer = FinalAnswer()
 
 
-with open(os.path.join(CURRENT_DIR, "prompts.yaml"), 'r') as stream:
+# with open(os.path.join(CURRENT_DIR, "prompts.yaml"), 'r') as stream:
     prompt_templates = yaml.safe_load(stream)
     
 
